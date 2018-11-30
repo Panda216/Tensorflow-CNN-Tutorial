@@ -34,6 +34,7 @@ def read_data(data_dir):
     datas = np.array(datas)
     labels = np.array(labels)
 
+    #shape数据维度
     print("shape of datas: {}\tshape of labels: {}".format(datas.shape, labels.shape))
     return fpaths, datas, labels
 
@@ -45,6 +46,7 @@ num_classes = len(set(labels))
 
 
 # 定义Placeholder，存放输入和标签
+#此函数可以理解为形参，用于定义过程，在执行的时候再赋具体的值
 datas_placeholder = tf.placeholder(tf.float32, [None, 32, 32, 3])
 labels_placeholder = tf.placeholder(tf.int32, [None])
 
